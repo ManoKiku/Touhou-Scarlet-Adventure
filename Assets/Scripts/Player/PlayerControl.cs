@@ -6,10 +6,11 @@ public class PlayerControl : MonoBehaviour
     public static PlayerControl instance { get; private set; }
 
     public Rigidbody2D rb { get; private set; }
+    public bool isActive = true;
 
     [SerializeField]
     private float speed;
-
+    
     private void Awake() 
     {
         instance = this;
@@ -18,14 +19,11 @@ public class PlayerControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (DialogueManager.Instance.isDialogueActive) 
+        if (!isActive || DialogueManager.Instance.isDialogueActive) 
         {
             rb.velocity = Vector2.zero;
-
             return;
         }
-
-        
 
         HandleMovement();
     }
