@@ -5,7 +5,7 @@ public class GameInput : MonoBehaviour
 {
     public static GameInput instance { get; private set; }
 
-    private PlayerInputActions action;
+    public PlayerInputActions action { get; private set; }
 
     private void Awake()
     {

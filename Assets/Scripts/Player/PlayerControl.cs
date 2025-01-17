@@ -7,11 +7,13 @@ public class PlayerControl : MonoBehaviour
 
     public Rigidbody2D rb { get; private set; }
     public bool isActive = true;
+    public Vector2 axis;
 
     [SerializeField]
     private float speed;
-    
-    private void Awake() 
+
+
+    private void Awake()
     {
         instance = this;
         rb = GetComponent<Rigidbody2D>();
@@ -19,18 +21,20 @@ public class PlayerControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isActive || DialogueManager.Instance.isDialogueActive) 
-        {
-            rb.velocity = Vector2.zero;
-            return;
-        }
-
         HandleMovement();
     }
 
     private void HandleMovement()
     {
-        Vector2 axis = GameInput.instance.GetMovementVector();
+        if(isActive)
+        {
+            axis = GameInput.instance.GetMovementVector();
+        }
+        if(DialogueManager.Instance.isDialogueActive)
+        {
+            axis = Vector2.zero;
+        }
+
         rb.velocity = axis.normalized * speed;
     }
 }
