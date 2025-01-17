@@ -12,8 +12,6 @@ public class PlayerVisual : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(PlayerControl.instance.rb.velocity.magnitude);
-        Debug.Log(PlayerControl.instance.rb.velocity);
         isMoving = Mathf.Abs(PlayerControl.instance.rb.velocity.magnitude) > 0.1f;
 
         if (isMoving)
