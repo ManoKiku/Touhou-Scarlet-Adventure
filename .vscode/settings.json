@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Touhou-6-Advanture.sln"
+    "dotnet.defaultSolution": "Touhou-6-Adventure.sln"
 }
