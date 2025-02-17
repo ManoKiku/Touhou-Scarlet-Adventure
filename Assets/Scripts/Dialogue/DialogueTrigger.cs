@@ -26,7 +26,6 @@ public class Dialogue
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
-    public bool disableOnExit = false;
 
     public void TriggerDialogue()
     {
@@ -38,13 +37,6 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.tag == "Player")
         {
             TriggerDialogue();
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision) {
-        if (collision.tag == "Player")
-        {
-            gameObject.SetActive(!disableOnExit);
         }
     }
 }

@@ -1516,8 +1516,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.72383326}
-  m_AnchoredPosition: {x: 0, y: 57.628998}
-  m_SizeDelta: {x: 201.863, y: -9.209}
+  m_AnchoredPosition: {x: -0.00051212, y: 57.628998}
+  m_SizeDelta: {x: 256, y: -9.209}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1896000763
 MonoBehaviour:
@@ -1552,7 +1552,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Touhou 6: Adventure'
+  m_Text: 'Touhou: Scarlet adventure'
 --- !u!222 &1896000764
 CanvasRenderer:
   m_ObjectHideFlags: 0

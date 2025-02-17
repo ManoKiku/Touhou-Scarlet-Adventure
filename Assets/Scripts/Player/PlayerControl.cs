@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -15,20 +16,16 @@ public class PlayerControl : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1.0f;
         instance = this;
+        
         rb = GetComponent<Rigidbody2D>();
+        GameInput.instance.action.Player.Use.performed += HandleUse;
     }
 
     void FixedUpdate()
     {
         HandleMovement();
-
-        if(!isActive) {
-            return;
-        }
-
-        HandleUse();
-
     }
 
     private void HandleMovement()
@@ -45,9 +42,14 @@ public class PlayerControl : MonoBehaviour
         rb.velocity = axis.normalized * speed;
     }
 
-    private void HandleUse() {
-        if(GameInput.instance.GetUseInput()) {
+    private void HandleUse(InputAction.CallbackContext e) {
+        if(isActive) {
             PlayerStatus.instance.UseBomb();
         }
+    }
+
+    private void HandleAttack(InputAction.CallbackContext e) 
+    {
+        // TO DO: Implement attack mechanic
     }
 }

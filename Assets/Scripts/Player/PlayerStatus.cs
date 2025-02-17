@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,8 @@ public class PlayerStatus : MonoBehaviour
     public int bombAmount;
     public int powerAmount;
     private bool isInvincible = false;
+    public int score = 0;
+    public Action onDead;
 
     [Header("Private var's")]
     [SerializeField]
@@ -22,7 +25,7 @@ public class PlayerStatus : MonoBehaviour
 
 
     private void Awake() {
-        instance = instance ?? this;
+        instance = this;
     }
 
     public void TakeHP() {
@@ -34,6 +37,10 @@ public class PlayerStatus : MonoBehaviour
 
         hp--;
         powerAmount = powerAmount * 5 / 6;
+
+        if(hp <= 0) {
+            onDead?.Invoke();
+        }
     }
 
     public void UseBomb() {

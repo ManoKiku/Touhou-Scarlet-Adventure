@@ -6,6 +6,7 @@ public class RadialBulletController : MonoBehaviour
     public float projectileSpeed;               // Speed of the projectile.
     public GameObject ProjectilePrefab;         // Prefab to spawn
     public float additionalAngle = 0;
+    public float lifeTime = 10;
 
     [Header("Private Variables")]
     private const float radius = 1F;            // Help us find the move direction.
@@ -32,7 +33,7 @@ public class RadialBulletController : MonoBehaviour
             tmpObj.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileMoveDirection.x, projectileMoveDirection.y);
 
             // Destory the gameobject after 10 seconds.
-            Destroy(tmpObj, 10F);
+            Destroy(tmpObj, lifeTime);
 
             angle += angleStep;
         }

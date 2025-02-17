@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
  
 public class WaveSpawner : MonoBehaviour
@@ -56,6 +57,8 @@ public class WaveSpawner : MonoBehaviour
             spawnTimer -= Time.fixedDeltaTime;
             waveTimer -= Time.fixedDeltaTime;
         }
+
+        spawnedEnemies = spawnedEnemies.Where(x => x != null).ToList();
  
         if(waveTimer<=0 && spawnedEnemies.Count <=0)
         {
@@ -69,7 +72,7 @@ public class WaveSpawner : MonoBehaviour
         waveValue = currWave * 10;
         GenerateEnemies();
  
-        spawnInterval = waveDuration / enemiesToSpawn.Count; // gives a fixed time between each enemies
+        spawnInterval = waveDuration / (enemiesToSpawn.Count + 1); // gives a fixed time between each enemies
         waveTimer = waveDuration; // wave duration is read only
     }
  

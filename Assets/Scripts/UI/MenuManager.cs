@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MenuManager : MonoBehaviour
 {
@@ -14,13 +15,13 @@ public class MenuManager : MonoBehaviour
     {
         menuCanvas.SetActive(false);
     }
-    void Update()
-    {
-        if (!GameInput.instance.GetMenuInput())
-        {
-            return;
-        }
 
+    private void Start()
+    {
+        GameInput.instance.action.UI.MenuOpenClose.performed += HandleMenu;
+    }
+
+    void HandleMenu(InputAction.CallbackContext e) {
         if (!isPaused) 
         {
             Pause();

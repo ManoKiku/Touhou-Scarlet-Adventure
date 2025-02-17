@@ -9,4 +9,9 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(sceneName);
     }
+
+    public void ChangeScene(int id)
+    {
+        SceneManager.LoadSceneAsync(id);
+    }
 }
