@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Touhou-scarlet-adventure.sln"
+    "dotnet.defaultSolution": "Touhou-Scarlet-Adventure.sln"
 }
