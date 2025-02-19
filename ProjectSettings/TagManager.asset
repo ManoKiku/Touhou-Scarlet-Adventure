@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Bullet
   - Water
   - UI
   - Obstacles
