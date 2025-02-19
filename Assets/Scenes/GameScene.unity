@@ -560,7 +560,7 @@ VFXRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
 --- !u!2083052967 &103335687
 VisualEffect:
   m_ObjectHideFlags: 0
@@ -9036,7 +9036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAYIezcE+AWYQIAABUFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzqVjvpLSW2sI6YGECenk4ouQ1liDLHn0ESAZ/ntXso0dOhyQ377dfW+19icRylbAnDYrI/hacyA/ByScybdBF3yEE91rtRUf0HLeBHdFINHIeaFOaMRHIc3qEpwR7Jfay0BOEPRK5NqUS76HVFtnEc6ptIAho13IVgh9DsgJ/4bzkHLG0/g+nD7wNE8GFzwyUA5MjzptmMNxQ6x5XjFJywp4EN3Rx23hSU1TaKdhJN9nob6WUthGDXHnKrpNaWU9ekECFxTdRQnBbAFiX7hQuZ/8nOcWXGPd0PNCGBxSXZX81vXkSmoPtbJ3Kn3oczeNouqa6//Cw1EM50aXj23bURJauEKwwws9M2pdb7J9ePFVt1dHKg90J+GtAPWkV0Z7xTHojA+p3sJ40T1enaUFsEOH11JvQF91A2/n3V5j8HCJ5k+pFOUuDn5aA1up47jj7YPBq/mDguNu2KYEokHFXwuvdN9foibwIIx1GGpcqiBvp70JVLKMMwtuvEu1URDhRnQFikp33mAZd3uDN7Fe25vIAw2vS9O8ibVvwU1KhDt+ktyENvp4vSxb6OMabPHsnRQKOtEh8IRzSrVS9YL1Z9Kmbb3JKeul7b3gX1eLzCbjZDK7y6c/2Px+MpsO5xR/OUvmk5yzfD4icfeEQp9UbmqhzXjw1lRXXOGetV+RwcrQKi47N/S4Eh+l7o1cqFxvmQFQz3WFq3Aw2ARfS77kAge0BeeEivdNPjMiNTsAz66Fsuh0eXKGZl2VjFTiXbuAZCSNn42MBPi6yxsD7wKOoXlb7EIu/wBQSwMEFAAACAgAABgh7G/GssxsAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKpsZGBsalZmolFsqW5samJrmUiEKYlG1gap6Ukp1kaKsUC1ZdUFqT6JeamQvQEJJZkpGXmpWTmpeu5F2WmuIOMVoqtBQBQSwECLQAUAAAICAAAGCHs3BPgFmECAAAVBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAGCHsb8ayzGwAAAB4AAAACQAkAAAAAAAAAAAAAACuAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGUDAAAAAA==
+    dataString: UEsDBBQAAAgIAAAQIezcE+AWYQIAABUFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzqVjvpLSW2sI6YGECenk4ouQ1liDLHn0ESAZ/ntXso0dOhyQ377dfW+19icRylbAnDYrI/hacyA/ByScybdBF3yEE91rtRUf0HLeBHdFINHIeaFOaMRHIc3qEpwR7Jfay0BOEPRK5NqUS76HVFtnEc6ptIAho13IVgh9DsgJ/4bzkHLG0/g+nD7wNE8GFzwyUA5MjzptmMNxQ6x5XjFJywp4EN3Rx23hSU1TaKdhJN9nob6WUthGDXHnKrpNaWU9ekECFxTdRQnBbAFiX7hQuZ/8nOcWXGPd0PNCGBxSXZX81vXkSmoPtbJ3Kn3oczeNouqa6//Cw1EM50aXj23bURJauEKwwws9M2pdb7J9ePFVt1dHKg90J+GtAPWkV0Z7xTHojA+p3sJ40T1enaUFsEOH11JvQF91A2/n3V5j8HCJ5k+pFOUuDn5aA1up47jj7YPBq/mDguNu2KYEokHFXwuvdN9foibwIIx1GGpcqiBvp70JVLKMMwtuvEu1URDhRnQFikp33mAZd3uDN7Fe25vIAw2vS9O8ibVvwU1KhDt+ktyENvp4vSxb6OMabPHsnRQKOtEh8IRzSrVS9YL1Z9Kmbb3JKeul7b3gX1eLzCbjZDK7y6c/2Px+MpsO5xR/OUvmk5yzfD4icfeEQp9UbmqhzXjw1lRXXOGetV+RwcrQKi47N/S4Eh+l7o1cqFxvmQFQz3WFq3Aw2ARfS77kAge0BeeEivdNPjMiNTsAz66Fsuh0eXKGZl2VjFTiXbuAZCSNn42MBPi6yxsD7wKOoXlb7EIu/wBQSwMEFAAACAgAABAh7G/GssxsAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKpsZGBsalZmolFsqW5samJrmUiEKYlG1gap6Ukp1kaKsUC1ZdUFqT6JeamQvQEJJZkpGXmpWTmpeu5F2WmuIOMVoqtBQBQSwECLQAUAAAICAAAECHs3BPgFmECAAAVBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAECHsb8ayzGwAAAB4AAAACQAkAAAAAAAAAAAAAACuAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGUDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -9049,7 +9049,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -9068,7 +9068,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -11229,9 +11229,21 @@ MonoBehaviour:
   isActive: 0
   axis: {x: 0, y: 0}
   speed: 2.5
-  bulletPrefab: {fileID: 4443908511455911098, guid: 4b6ddde96df887d5099ff32e86e6561c, type: 3}
+  bulletType:
+  - bulletPrefab: {fileID: 4443908511455911098, guid: 4b6ddde96df887d5099ff32e86e6561c, type: 3}
+    cost: 0
+  - bulletPrefab: {fileID: 4758836038226560879, guid: 92a8328f1c08b254281a4efbf8760caf, type: 3}
+    cost: 16
+  - bulletPrefab: {fileID: 3534494468208347089, guid: 6219dcfb69217ee4aa871e1814177458, type: 3}
+    cost: 32
+  - bulletPrefab: {fileID: 5095063220274521707, guid: d772a237d700f77479ec4719c4a60a1e, type: 3}
+    cost: 64
+  - bulletPrefab: {fileID: 5095063220274521707, guid: 78c7ef0bc4cea3c4391d5e5d2a9c12c4, type: 3}
+    cost: 96
+  - bulletPrefab: {fileID: 5095063220274521707, guid: e57ab7ede9b7b564fa49ea1366a3c529, type: 3}
+    cost: 128
   bulletSpeed: 5
-  fireRate: 0.2
+  fireRate: 0.25
 --- !u!95 &1488849198
 Animator:
   serializedVersion: 7
@@ -11270,7 +11282,7 @@ CapsuleCollider2D:
     m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 247
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -11308,6 +11320,9 @@ MonoBehaviour:
   powerAmount: 0
   score: 0
   bombRadius: 3
+  bombDamage: 3
+  attackedEffect: {fileID: 1458263997071272213, guid: d1b403def5ec44946a8119dd5deec8ce, type: 3}
+  bombEffect: {fileID: 4656552546399924423, guid: 2dfdbbfd1a440c04ca1bebb0e06f94d8, type: 3}
 --- !u!1 &1498863166
 GameObject:
   m_ObjectHideFlags: 0
@@ -12019,7 +12034,7 @@ GameObject:
   - component: {fileID: 1726288690}
   m_Layer: 0
   m_Name: Colider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12081,7 +12096,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 83749316, guid: 59463cd0a8c43ff4a9c777290b02fff8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
