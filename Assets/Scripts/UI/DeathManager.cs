@@ -16,10 +16,6 @@ public class DeathManager : MonoBehaviour
         PlayerStatus.instance.onDead += EndGame;
     }
 
-    public void SaveResult() {
-        // TO DO: Implement save mechanic using web API and token system
-    }
-
     public void EndGame() {
         PlayerControl.instance.isActive = false;
         PlayerControl.instance.axis = Vector2.zero;
