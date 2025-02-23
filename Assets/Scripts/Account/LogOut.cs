@@ -18,7 +18,7 @@ public class LogOut : MonoBehaviour
         StartCoroutine(WebRequestUtility.GetRequest("http://touhou-adventure.mooo.com/api/logout", (i) => Debug.Log(i), (i) => PlayerPrefs.DeleteKey("AccessToken"), keys));
 
         PlayerPrefs.DeleteKey("Username");
-        PlayerPrefs.DeleteKey("RefreshToken");
+        PlayerPrefs.DeleteKey("AccessToken");
         mainMenu.SetActive(false);
         signInMenu.SetActive(true);
     }

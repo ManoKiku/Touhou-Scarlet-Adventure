@@ -26,10 +26,12 @@ public class Bonus : MonoBehaviour
                                     .Where(x => x.CompareTag("Player")).ToArray();
                                
         if(hitColliders.Length == 0)
+        {
+            rb.velocity = Vector2.zero;
             return;
+        }
         
-        Vector2 force = (hitColliders[0].transform.position - transform.position).normalized * additionalForce;
-        rb.AddForce(force);
+        rb.velocity = (hitColliders[0].transform.position - transform.position).normalized * additionalForce;
     }
 
     public void OnTriggerEnter2D(Collider2D collider)
