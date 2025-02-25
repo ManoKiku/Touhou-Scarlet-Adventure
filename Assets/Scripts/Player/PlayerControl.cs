@@ -113,7 +113,7 @@ public class PlayerControl : MonoBehaviour
         if(!isActive || DialogueManager.Instance.isDialogueActive)
             return;
 
-        GameObject buff = Instantiate(bulletType[currentType].bulletPrefab);
+        GameObject buff = Instantiate(bulletType[currentType].bulletPrefab, transform);
 
         float angle = Mathf.Atan2(lastNoZeroAxis.y, lastNoZeroAxis.x) * Mathf.Rad2Deg;
         float snappedAngle = Mathf.Round(angle / 45) * 45;

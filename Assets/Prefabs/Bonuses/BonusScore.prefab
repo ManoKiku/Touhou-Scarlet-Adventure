@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
-  additionalForce: 50
+  additionalForce: 6
   addValue: 100
 --- !u!61 &6865049835870764635
 BoxCollider2D:

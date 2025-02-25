@@ -1,4 +1,12 @@
+using System.Linq;
 using UnityEngine;
+
+[System.Serializable]
+public struct SpawnableObject
+{
+    public GameObject gameObject;
+    public int chance;
+}
 
 public class EnemyStatus : MonoBehaviour
 {
@@ -7,7 +15,7 @@ public class EnemyStatus : MonoBehaviour
     public int scoreOnDead;
 
     [SerializeField]
-    private GameObject[] bonuses;
+    private SpawnableObject[] bonuses;
     [SerializeField]
     private GameObject attackedEffect;
 
@@ -17,9 +25,38 @@ public class EnemyStatus : MonoBehaviour
 
         if(hp <= 0) {
             PlayerStatus.instance.score += scoreOnDead;
-            Instantiate(bonuses[Random.Range(0, bonuses.Length)], transform.position, new Quaternion());
+            GameObject buff = GetRandomObject(bonuses);
+            if(buff != null)
+            {
+                Instantiate(buff, transform.position, new Quaternion());
+            }
             Destroy(this.gameObject);
         }
+    }
+
+    GameObject GetRandomObject(SpawnableObject[] spawnableObjects)
+    {
+        int totalChance = spawnableObjects.Select(x => x.chance).Sum();
+
+        if (spawnableObjects.Length == 0 || totalChance <= 0)
+        {
+            Debug.LogError("Invalid spawn configuration!");
+            return null;
+        }
+
+        int randomNumber = Random.Range(0, totalChance);
+        int runningTotal = 0;
+
+        foreach (SpawnableObject obj in spawnableObjects)
+        {
+            runningTotal += obj.chance;
+            if (randomNumber >= runningTotal - obj.chance && randomNumber < runningTotal)
+            {
+                return obj.gameObject;
+            }
+        }
+
+        return spawnableObjects[0].gameObject;
     }
 
 

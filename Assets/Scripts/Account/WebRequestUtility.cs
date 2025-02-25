@@ -17,7 +17,6 @@ public static class WebRequestUtility
                 webRequest.SetRequestHeader(i.Key, i.Value);
             }
             webRequest.SetRequestHeader("User-Agent", "Unity");
-
             yield return webRequest.SendWebRequest();
 
             if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError)

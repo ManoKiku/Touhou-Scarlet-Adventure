@@ -11,7 +11,6 @@ public class RadialBulletController : MonoBehaviour
     [Header("Private Variables")]
     private const float radius = 1F;            // Help us find the move direction.
 
-    // Spawns x number of projectiles.
     public void SpawnProjectile(int _numberOfProjectiles)
     {
         float angleStep = 360f / _numberOfProjectiles;

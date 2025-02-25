@@ -25,7 +25,6 @@ public class AutoBullet : MonoBehaviour
         if(hitColliders.Length == 0)
             return;
         
-        Vector2 force = (hitColliders[0].transform.position - transform.position).normalized * additionalForce;
-        rb.AddForce(force);
+        rb.velocity = (hitColliders[0].transform.position - transform.position).normalized * rb.velocity.magnitude * additionalForce;
     }
 }
