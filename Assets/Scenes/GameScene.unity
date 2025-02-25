@@ -7806,6 +7806,7 @@ MonoBehaviour:
   menuActiveButton: {fileID: 146292832}
   areYouSureCanvas: {fileID: 1258085858}
   eventSystem: {fileID: 1197770793}
+  dialogueButton: {fileID: 1720700554}
 --- !u!4 &226535009
 Transform:
   m_ObjectHideFlags: 0
@@ -10017,7 +10018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 146292832}
+  m_FirstSelected: {fileID: 1720700554}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1197770794

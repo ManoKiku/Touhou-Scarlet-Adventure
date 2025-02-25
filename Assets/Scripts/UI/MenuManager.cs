@@ -16,6 +16,8 @@ public class MenuManager : MonoBehaviour
     [Header("Event system")]
     [SerializeField]
     private EventSystem eventSystem;
+    [SerializeField]
+    private GameObject dialogueButton;
 
     bool isPaused = false;
 
@@ -52,7 +54,7 @@ public class MenuManager : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1.0f;
-
+        eventSystem.SetSelectedGameObject(dialogueButton);
         CloseAllMenus();
     }
     void OpenMenu()

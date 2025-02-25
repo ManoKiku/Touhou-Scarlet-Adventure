@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -11,13 +12,9 @@ public class DialogueManager : MonoBehaviour
     public Image characterIcon;
     public TextMeshProUGUI characterName;
     public TextMeshProUGUI dialogueArea;
-
     private Queue<DialogueLine> lines;
-
     public bool isDialogueActive = false;
-
     public float typingSpeed = 0.2f;
-
     public Animator animator;
 
     private void Awake()
