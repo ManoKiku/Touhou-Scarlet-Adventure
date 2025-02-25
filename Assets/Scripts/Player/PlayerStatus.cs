@@ -59,7 +59,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Bullet")) {
-            Debug.Log("Lol");
+            Debug.Log("Attacked!");
             TakeHP();
         }    
     }
