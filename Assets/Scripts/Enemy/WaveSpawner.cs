@@ -1,15 +1,75 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+
+[Serializable]
+public class EnemyWaveProgression
+{
+    [SerializeField] private double a; // Additional offset
+    [SerializeField] private double b; // Scaling factor
+    [SerializeField] private double c; // Controls the frequency of the sine wave
+    [SerializeField] private double d; // Scaling for linear component
+
+
+    public double A
+    {
+        get => a;
+        set => a = value;
+    }
+
+    public double B
+    {
+        get => b;
+        set => b = value;
+    }
+
+    public double C
+    {
+        get => c;
+        set => c = value;
+    }
+
+    public double D
+    {
+        get => d;
+        set => d = value;
+    }
+
+    public EnemyWaveProgression(double b, double c)
+    {
+        this.b = b;
+        this.c = c;
+    }
+
+    public double CalculateWaveValue(double x)
+    {
+        double sineComponent = Math.Sin(x / C);
+        double linearComponent = D * x;
+        double waveValue = A + B * (sineComponent + linearComponent);
+
+        return waveValue;
+    }
+}
+
+ 
+[Serializable]
+public class WaveEnemy
+{
+    public GameObject enemyPrefab;
+    public int cost;
+}
  
 public class WaveSpawner : MonoBehaviour
 {
    [Header("Wave settings")]
-    public int currWave;
+    public int currWave = 1;
     private int waveValue;
     public float spawnInterval;
     public float additionalWaveTime = 10;
+    [SerializeField]
+    public EnemyWaveProgression progression;
     public List<WaveEnemy> enemies = new List<WaveEnemy>();
     public List<GameObject> enemiesToSpawn = new List<GameObject>();
     public List<GameObject> spawnedEnemies = new List<GameObject>();
@@ -34,7 +94,7 @@ public class WaveSpawner : MonoBehaviour
         {
             if(enemiesToSpawn.Count >0)
             {
-                spawnIndex = Random.Range(0, spawnLocation.Length);
+                spawnIndex = UnityEngine.Random.Range(0, spawnLocation.Length);
                 GameObject enemy = Instantiate(enemiesToSpawn[0], spawnLocation[spawnIndex].position,Quaternion.identity); // spawn first enemy in our list
                 enemiesToSpawn.RemoveAt(0); // and remove it
                 spawnedEnemies.Add(enemy);
@@ -62,7 +122,8 @@ public class WaveSpawner : MonoBehaviour
  
     public void GenerateWave()
     {
-        waveValue = currWave * 10;
+        waveValue = (int)progression.CalculateWaveValue(currWave);
+        Debug.Log(waveValue);
         GenerateEnemies();
         waveDuration = (int)(enemiesToSpawn.Count() * spawnInterval + additionalWaveTime);
 
@@ -85,7 +146,7 @@ public class WaveSpawner : MonoBehaviour
         List<GameObject> generatedEnemies = new List<GameObject>();
         while(waveValue>0 || generatedEnemies.Count <50)
         {
-            int randEnemyId = Random.Range(0, enemies.Count);
+            int randEnemyId = UnityEngine.Random.Range(0, enemies.Count);
             
             int randEnemyCost = enemies[randEnemyId].cost;
  
@@ -103,11 +164,4 @@ public class WaveSpawner : MonoBehaviour
         enemiesToSpawn = generatedEnemies;
     }
   
-}
- 
-[System.Serializable]
-public class WaveEnemy
-{
-    public GameObject enemyPrefab;
-    public int cost;
 }

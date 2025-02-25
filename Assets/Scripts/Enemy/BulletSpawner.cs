@@ -4,7 +4,6 @@ public class BulletSpawner : MonoBehaviour
 {
     [Header("Settings")]
     public float bulletSpeed = 5f;
-    public float rotationSpeed = 200f;
     public float bulletLife = 5f;
     private Transform target;
     public GameObject bulletPrefab;
@@ -19,7 +18,11 @@ public class BulletSpawner : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
         var buff = bullet.GetComponent<Rigidbody2D>();
-        buff.velocity = (target.transform.position + offset - bullet.transform.position).normalized * bulletSpeed;    
+        buff.velocity = (target.transform.position + offset - bullet.transform.position).normalized * bulletSpeed;
+
+        float angle = Mathf.Atan2(buff.velocity.y, buff.velocity.x) * Mathf.Rad2Deg;
+        bullet.transform.rotation = Quaternion.Euler(0, 0, angle);    
+
         Destroy(bullet, bulletLife);       
     }
 }

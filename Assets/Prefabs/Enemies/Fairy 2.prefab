@@ -184,9 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 1.5
-  rotationSpeed: 200
   bulletLife: 7
-  bulletPrefab: {fileID: 6582496633998073183, guid: cc36434be34a0d44dbd9cf74f421a590, type: 3}
+  bulletPrefab: {fileID: 2737730547239630916, guid: 4fd4ac82c8f1473498f4ac8b558e13ef, type: 3}
   spawnPoint: {fileID: 3052669777401170606}
   offset: {x: 0, y: -0.34, z: 0}
 --- !u!114 &2186080493924507511

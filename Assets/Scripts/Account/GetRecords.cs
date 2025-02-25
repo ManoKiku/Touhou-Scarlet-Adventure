@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,13 +16,38 @@ public class GetRecords : MonoBehaviour
     [SerializeField]
     private RectTransform rectTransform;
 
-    private void Awake() {
-        GetRecordsTable();
+    [SerializeField]
+    private Toggle unique, username;
+
+
+    private void OnEnable() {
+        if(!PlayerPrefs.HasKey("AccessToken")) {
+            username.interactable = false;
+            username.isOn = false;
+        }
+        else{
+            username.interactable = true;
+        }
+        GetRecordsTable(); 
     }
 
     public void GetRecordsTable()
     {
-        StartCoroutine(WebRequestUtility.GetRequest($"http://touhou-adventure.mooo.com/api/get-records",
+        string apiUrl = $"http://touhou-adventure.mooo.com/api/get-records?unique={Convert.ToInt32(unique.isOn)}";
+        if(username.isOn)
+        {
+            apiUrl += $"&username={PlayerPrefs.GetString("Username")}";
+        }
+
+
+
+        Text[] records = parent.gameObject.GetComponentsInChildren<Text>();
+        foreach(Text record in records)
+        {
+            Destroy(record);
+        }
+
+        StartCoroutine(WebRequestUtility.GetRequest(apiUrl,
         (answer) => {
             Debug.Log(answer);
             var response = JObject.Parse(answer);
@@ -41,9 +67,11 @@ public class GetRecords : MonoBehaviour
                 count++;
             }
             rectTransform.position = new Vector2(0, -response["records"].Count() * 1500);
+            rectTransform.sizeDelta = new Vector2(200, response["records"].Count() * 25);
         },
         (answer) =>{
             Debug.Log(answer);
         }));
+        
     }
 }

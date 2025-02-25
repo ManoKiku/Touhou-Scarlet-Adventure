@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine.Networking;
 using UnityEngine;
+using System.Net;
 
 public static class WebRequestUtility
 {
@@ -17,6 +18,9 @@ public static class WebRequestUtility
                 webRequest.SetRequestHeader(i.Key, i.Value);
             }
             webRequest.SetRequestHeader("User-Agent", "Unity");
+            webRequest.SetRequestHeader("Version", Application.version);
+            UnityEngine.Debug.Log(Application.version);
+
             yield return webRequest.SendWebRequest();
 
             if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError)
@@ -42,6 +46,8 @@ public static class WebRequestUtility
 
             webRequest.SetRequestHeader("Content-Type", "application/json");
             webRequest.SetRequestHeader("User-Agent", "Unity");
+            webRequest.SetRequestHeader("Version", Application.version);
+            UnityEngine.Debug.Log(Application.version);
 
             foreach(var i in headers)
             {
