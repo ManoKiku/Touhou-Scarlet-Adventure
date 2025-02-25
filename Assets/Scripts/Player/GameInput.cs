@@ -24,4 +24,9 @@ public class GameInput : MonoBehaviour
         return action.UI.MenuOpenClose.WasPressedThisFrame();
     }
 
+    public bool GetUseInput()
+    {
+        return action.Player.Use.WasPressedThisFrame();
+    }
+
 }

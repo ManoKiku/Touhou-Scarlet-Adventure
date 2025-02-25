@@ -22,6 +22,13 @@ public class PlayerControl : MonoBehaviour
     void FixedUpdate()
     {
         HandleMovement();
+
+        if(!isActive) {
+            return;
+        }
+
+        HandleUse();
+
     }
 
     private void HandleMovement()
@@ -36,5 +43,11 @@ public class PlayerControl : MonoBehaviour
         }
 
         rb.velocity = axis.normalized * speed;
+    }
+
+    private void HandleUse() {
+        if(GameInput.instance.GetUseInput()) {
+            PlayerStatus.instance.UseBomb();
+        }
     }
 }
