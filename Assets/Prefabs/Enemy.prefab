@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6070345129958695411}
   - component: {fileID: 4448948642021256401}
   - component: {fileID: 618911289866213521}
+  - component: {fileID: 5885527772792189487}
   - component: {fileID: 5663626486209092587}
   m_Layer: 0
   m_Name: Enemy
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6176696409724508548, guid: b355b6a69a8a01c468d48f458d065f64, type: 3}
+  m_Sprite: {fileID: -5662007422927484889, guid: 7ddb024497a93ae47b67dc86b2452179, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62422d9d38d14d44ebf90508e310ff86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 1
+  projectileSpeed: 1.5
   ProjectilePrefab: {fileID: 6582496633998073183, guid: 4dbbddc47cbe1d24c8d7591831ad4597, type: 3}
   additionalAngle: 0
   lifeTime: 5
@@ -254,6 +255,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.012522697}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &5885527772792189487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5142954151683781627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59908020e373768acaa19a97a067925a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
+  scoreOnDead: 100
 --- !u!50 &5663626486209092587
 Rigidbody2D:
   serializedVersion: 4

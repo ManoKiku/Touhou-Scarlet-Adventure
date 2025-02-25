@@ -14,9 +14,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Text scoreText;
     private void Update() {
-        hpText.text = $"HP: {PlayerStatus.instance.hp}/5";
-        powerText.text = $"P: {PlayerStatus.instance.powerAmount}/128";
-        bombText.text = $"B: {PlayerStatus.instance.bombAmount}/5";
-        scoreText.text = $"Score: {PlayerStatus.instance.score}";
+        hpText.text = $"HP {PlayerStatus.instance.hp} - 5";
+        powerText.text = $"PW {PlayerStatus.instance.powerAmount} - 128";
+        bombText.text = $"BM {PlayerStatus.instance.bombAmount} - 5";
+        scoreText.text = $"Score {PlayerStatus.instance.score}";
     }
 }

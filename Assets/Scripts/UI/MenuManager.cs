@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -7,7 +9,13 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     private GameObject menuCanvas;
     [SerializeField]
+    private GameObject menuActiveButton;
+    [SerializeField]
     private GameObject areYouSureCanvas;
+
+    [Header("Event system")]
+    [SerializeField]
+    private EventSystem eventSystem;
 
     bool isPaused = false;
 
@@ -49,6 +57,7 @@ public class MenuManager : MonoBehaviour
     }
     void OpenMenu()
     {
+        eventSystem.SetSelectedGameObject(menuActiveButton);
         menuCanvas.SetActive(true);
         areYouSureCanvas.SetActive(false);
     }
