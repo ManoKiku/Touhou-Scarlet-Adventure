@@ -18,6 +18,15 @@ public class PlayerControl : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (DialogueManager.Instance.isDialogueActive) 
+        {
+            rb.velocity = Vector2.zero;
+
+            return;
+        }
+
+        
+
         HandleMovement();
     }
 
