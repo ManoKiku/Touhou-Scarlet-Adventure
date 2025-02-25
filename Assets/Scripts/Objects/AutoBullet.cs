@@ -26,7 +26,6 @@ public class AutoBullet : MonoBehaviour
             return;
         
         Vector2 force = (hitColliders[0].transform.position - transform.position).normalized * additionalForce;
-        Debug.Log(force);
         rb.AddForce(force);
     }
 }
