@@ -5,11 +5,21 @@ public class GameInput : MonoBehaviour
 {
     public static GameInput instance { get; private set; }
 
-    public PlayerInputActions action { get; private set; }
+    public PlayerInputActions action;
+    
+    void OnEnable()
+    {
+        action.Enable();
+    }
+
+    void OnDisable()
+    {
+        action.Disable();
+    }
 
     private void Awake()
     {
-        instance = instance ?? this;
+        instance = this;
 
         action = new PlayerInputActions();
         action.Enable();
@@ -18,15 +28,4 @@ public class GameInput : MonoBehaviour
     {
         return action.Player.Move.ReadValue<Vector2>();
     }
-
-    public bool GetMenuInput()
-    {
-        return action.UI.MenuOpenClose.WasPressedThisFrame();
-    }
-
-    public bool GetUseInput()
-    {
-        return action.Player.Use.WasPressedThisFrame();
-    }
-
 }

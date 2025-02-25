@@ -22,8 +22,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
+        Instance = this;
 
         lines = new Queue<DialogueLine>();
     }

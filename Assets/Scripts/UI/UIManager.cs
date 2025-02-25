@@ -11,10 +11,12 @@ public class UIManager : MonoBehaviour
     private Text powerText;
     [SerializeField]
     private Text bombText;
+    [SerializeField]
+    private Text scoreText;
     private void Update() {
         hpText.text = $"HP: {PlayerStatus.instance.hp}/5";
         powerText.text = $"P: {PlayerStatus.instance.powerAmount}/128";
         bombText.text = $"B: {PlayerStatus.instance.bombAmount}/5";
-
+        scoreText.text = $"Score: {PlayerStatus.instance.score}";
     }
 }

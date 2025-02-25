@@ -1,30 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
+using Pathfinding;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public GameObject player;
-    public float speed;
-    private float distance;
-    public float distanceBetween;
+    private AIPath path;
+    private Transform target;
 
-    void Start() 
+    [SerializeField] 
+    private float moveSpeed;
+    [SerializeField] 
+    private float stopDistance;
+    [SerializeField] 
+    private float viewDistance;
+    [SerializeField] 
+    private float walkingRadius;
+    
+    
+
+    private void Start()
     {
-        player = PlayerControl.instance.gameObject;
+        path = GetComponent<AIPath>();
+        path.enableRotation = false;
+        path.radius = 5;
+        target = PlayerControl.instance.transform;
+        StartCoroutine(GenerateCoordinates());
     }
 
-    void Update()
-    {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
-        direction.Normalize();
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        if (distance > distanceBetween)
+    private IEnumerator GenerateCoordinates() {
+        while (true) 
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-            // transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+            yield return new WaitForSeconds(0.5f);
+            path.maxSpeed = moveSpeed;
+
+            float distanceToTarger = Vector2.Distance(transform.position, target.position); 
+            
+            if(distanceToTarger <= viewDistance && stopDistance <= distanceToTarger)
+            {
+                path.destination = target.position;
+            } 
+            else 
+            {
+                path.destination = transform.position +  new Vector3(Random.Range(-walkingRadius * 100, walkingRadius * 100), Random.Range(-walkingRadius * 100, walkingRadius * 100), 0) / 100;
+                yield return new WaitForSeconds(0.5f);
+            }
         }
     }
 }
