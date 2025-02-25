@@ -18,9 +18,9 @@ GameObject:
   - component: {fileID: 618911289866213521}
   - component: {fileID: 5885527772792189487}
   - component: {fileID: 5663626486209092587}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,8 +252,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.012522697}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: 0, y: -0.27774405}
+  m_Size: {x: 0.62528515, y: 0.71774626}
   m_Direction: 0
 --- !u!114 &5885527772792189487
 MonoBehaviour:
@@ -269,6 +269,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   scoreOnDead: 100
+  bonuses:
+  - {fileID: 5206046703982635500, guid: 1352af94c52b07341bb741654a99211e, type: 3}
+  - {fileID: 5206046703982635500, guid: 1352af94c52b07341bb741654a99211e, type: 3}
+  - {fileID: 5206046703982635500, guid: 1352af94c52b07341bb741654a99211e, type: 3}
+  - {fileID: 5206046703982635500, guid: 1352af94c52b07341bb741654a99211e, type: 3}
+  - {fileID: 5206046703982635500, guid: 1352af94c52b07341bb741654a99211e, type: 3}
+  - {fileID: 5206046703982635500, guid: 1352af94c52b07341bb741654a99211e, type: 3}
+  - {fileID: 5206046703982635500, guid: 1352af94c52b07341bb741654a99211e, type: 3}
+  - {fileID: 5206046703982635500, guid: 1352af94c52b07341bb741654a99211e, type: 3}
+  - {fileID: 5206046703982635500, guid: 1352af94c52b07341bb741654a99211e, type: 3}
+  - {fileID: 5206046703982635500, guid: 1352af94c52b07341bb741654a99211e, type: 3}
+  - {fileID: 5648087083504759726, guid: e1d852d4e0066ed4a9a7c5e357d56d14, type: 3}
+  - {fileID: 5648087083504759726, guid: e1d852d4e0066ed4a9a7c5e357d56d14, type: 3}
+  - {fileID: 5648087083504759726, guid: e1d852d4e0066ed4a9a7c5e357d56d14, type: 3}
+  - {fileID: 5648087083504759726, guid: e1d852d4e0066ed4a9a7c5e357d56d14, type: 3}
+  - {fileID: 5648087083504759726, guid: e1d852d4e0066ed4a9a7c5e357d56d14, type: 3}
+  - {fileID: 5648087083504759726, guid: e1d852d4e0066ed4a9a7c5e357d56d14, type: 3}
+  - {fileID: 1435097946553617706, guid: 64412db4e9b15bf49984d377d403f7b6, type: 3}
+  - {fileID: 1435097946553617706, guid: 64412db4e9b15bf49984d377d403f7b6, type: 3}
+  - {fileID: 1435097946553617706, guid: 64412db4e9b15bf49984d377d403f7b6, type: 3}
+  - {fileID: 3213091320247167582, guid: 3ccb6e1773fe4a44f853755f40f4c497, type: 3}
+  attackedEffect: {fileID: 1458263997071272213, guid: d1b403def5ec44946a8119dd5deec8ce, type: 3}
 --- !u!50 &5663626486209092587
 Rigidbody2D:
   serializedVersion: 4
@@ -281,7 +303,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
