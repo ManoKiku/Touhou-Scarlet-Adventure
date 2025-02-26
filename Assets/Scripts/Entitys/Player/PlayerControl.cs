@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,20 +14,10 @@ public struct Bullet
     public int cost;
 }
 
-public class PlayerControl : MonoBehaviour
+public class PlayerControl : EntityControl
 {
     public static PlayerControl instance { get; private set; }
 
-    
-    public Rigidbody2D rb { get; private set; }
-    public bool isActive = true;
-    public Vector2 axis;
-
-    private Vector2 lastNoZeroAxis;
-
-    [Header("Player stats")]
-    [SerializeField]
-    private float speed;
 
     [Header("Bullet stats")]
     [SerializeField]
@@ -34,6 +26,14 @@ public class PlayerControl : MonoBehaviour
     private float bulletSpeed;
     [SerializeField]
     private float fireRate;
+
+    [Header("Bomb stats")]
+    [SerializeField]
+    private float bombRadius = 3;
+    [SerializeField]
+    private int bombDamage = 3;
+    [SerializeField]
+    private GameObject bombEffect;
 
     private int currentType = 0;
     private float nextFireTime;
@@ -66,12 +66,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        HandleMovement();
-    }
-
-    private void HandleMovement()
+    protected override void HandleMovement()
     {
         if(isActive)
         {
@@ -105,7 +100,7 @@ public class PlayerControl : MonoBehaviour
         if(!isActive || DialogueManager.Instance.isDialogueActive) 
             return;
 
-        PlayerStatus.instance.UseBomb();
+        UseBomb();
     }
 
     private void Shoot() 
@@ -129,5 +124,26 @@ public class PlayerControl : MonoBehaviour
         }
 
         Destroy(buff, 10);
+    }
+
+    public void UseBomb() {
+        if(PlayerStatus.instance.bombAmount <= 0) {
+            return;
+        }
+
+        Destroy(Instantiate(bombEffect, transform.position, new Quaternion()), 1);
+
+        List<Collider2D> objects = Physics2D.OverlapCircleAll(transform.position, bombRadius).ToList<Collider2D>();
+        foreach(var obj in objects) {
+            if(obj.CompareTag("Bullet")) {
+                Destroy(obj.gameObject);
+            }
+            if(obj.CompareTag("Enemy"))
+            {
+                obj.GetComponent<EnemyStatus>().TakeHP(bombDamage);
+            }
+        }
+ 
+        PlayerStatus.instance.bombAmount--;
     }
 }

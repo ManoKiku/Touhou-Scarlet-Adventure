@@ -4,10 +4,12 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
+using System;
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
+    public Action onDialogueEnd;
 
     public Image characterIcon;
     public TextMeshProUGUI characterName;
@@ -70,6 +72,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        onDialogueEnd?.Invoke();
         isDialogueActive = false;
         animator.Play("Hide");
     }

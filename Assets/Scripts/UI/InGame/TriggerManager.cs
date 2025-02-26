@@ -7,6 +7,10 @@ public class TriggerManager : MonoBehaviour
     [SerializeField]
     private GameObject mapColider; 
 
+    private void Start() {
+        DialogueManager.Instance.onDialogueEnd += StartGame;
+    }
+
     public void StartGame() 
     {
         spawnerManager.SetActive(true);
@@ -14,10 +18,7 @@ public class TriggerManager : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Player")) {
-            StartGame();
-        }
+    private void OnDisable() {
+        DialogueManager.Instance.onDialogueEnd -= StartGame;
     }
 }

@@ -8,19 +8,19 @@ public struct SpawnableObject
     public int chance;
 }
 
-public class EnemyStatus : MonoBehaviour
+public class EnemyStatus : EntityStatus
 {
-    [Header("Main stats")]
-    public int hp;
     public int scoreOnDead;
 
     [SerializeField]
     private SpawnableObject[] bonuses;
-    [SerializeField]
-    private GameObject attackedEffect;
 
-    public void TakeHP(int takeHp = 1) {
-        hp -= takeHp;
+    public override void TakeHP(int amount = 1) {
+        if(isInvincible) {
+            return;
+        }
+
+        hp -= amount;
         Destroy(Instantiate(attackedEffect, transform.position, new Quaternion()), 1);
 
         if(hp <= 0) {

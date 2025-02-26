@@ -7,47 +7,16 @@ using UnityEngine;
 [Serializable]
 public class EnemyWaveProgression
 {
-    [SerializeField] private double a; // Additional offset
-    [SerializeField] private double b; // Scaling factor
-    [SerializeField] private double c; // Controls the frequency of the sine wave
-    [SerializeField] private double d; // Scaling for linear component
-
-
-    public double A
-    {
-        get => a;
-        set => a = value;
-    }
-
-    public double B
-    {
-        get => b;
-        set => b = value;
-    }
-
-    public double C
-    {
-        get => c;
-        set => c = value;
-    }
-
-    public double D
-    {
-        get => d;
-        set => d = value;
-    }
-
-    public EnemyWaveProgression(double b, double c)
-    {
-        this.b = b;
-        this.c = c;
-    }
+    public double a; // Additional offset
+    public double b; // Scaling factor
+    public double c; // Controls the frequency of the sine wave
+    public double d; // Scaling for linear component
 
     public double CalculateWaveValue(double x)
     {
-        double sineComponent = Math.Sin(x / C);
-        double linearComponent = D * x;
-        double waveValue = A + B * (sineComponent + linearComponent);
+        double sineComponent = Math.Sin(x / c);
+        double linearComponent = d * x;
+        double waveValue = a + b * (sineComponent + linearComponent);
 
         return waveValue;
     }
@@ -63,12 +32,16 @@ public class WaveEnemy
  
 public class WaveSpawner : MonoBehaviour
 {
+    public static WaveSpawner instance;
+    public static Action OnWaveChange;
+    public bool isActive = true;
+
    [Header("Wave settings")]
     public int currWave = 1;
     private int waveValue;
     public float spawnInterval;
     public float additionalWaveTime = 10;
-    [SerializeField]
+
     public EnemyWaveProgression progression;
     public List<WaveEnemy> enemies = new List<WaveEnemy>();
     public List<GameObject> enemiesToSpawn = new List<GameObject>();
@@ -82,14 +55,18 @@ public class WaveSpawner : MonoBehaviour
     public float waveTimer {get; private set;}
     public float spawnTimer {get; private set; }
  
-
     void Start()
     {
+        instance = this;
         GenerateWave();
     }
  
     void FixedUpdate()
     {
+        if(!isActive) {
+            return;
+        }
+
         if(spawnTimer <=0)
         {
             if(enemiesToSpawn.Count >0)
@@ -116,6 +93,10 @@ public class WaveSpawner : MonoBehaviour
         if(waveTimer<=0 && spawnedEnemies.Count <=0)
         {
             currWave++;
+            OnWaveChange.Invoke();
+            if(!isActive){
+                return;
+            }
             GenerateWave();
         }
     }
