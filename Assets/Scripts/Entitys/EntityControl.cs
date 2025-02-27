@@ -12,6 +12,10 @@ public class EntityControl : MonoBehaviour
     [SerializeField]
     protected float speed;
 
+    private void Awake() {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     protected virtual void FixedUpdate()
     {
         HandleMovement();

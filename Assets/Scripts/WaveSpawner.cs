@@ -34,7 +34,7 @@ public class WaveSpawner : MonoBehaviour
 {
     public static WaveSpawner instance;
     public static Action OnWaveChange;
-    public bool isActive = true;
+    public bool isWorking = true;
 
    [Header("Wave settings")]
     public int currWave = 1;
@@ -63,7 +63,7 @@ public class WaveSpawner : MonoBehaviour
  
     void FixedUpdate()
     {
-        if(!isActive) {
+        if(!isWorking) {
             return;
         }
 
@@ -93,8 +93,8 @@ public class WaveSpawner : MonoBehaviour
         if(waveTimer<=0 && spawnedEnemies.Count <=0)
         {
             currWave++;
-            OnWaveChange.Invoke();
-            if(!isActive){
+            OnWaveChange?.Invoke();
+            if(!isWorking){
                 return;
             }
             GenerateWave();

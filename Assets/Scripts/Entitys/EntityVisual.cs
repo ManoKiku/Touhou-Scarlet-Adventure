@@ -6,7 +6,7 @@ public class EntityVisual : MonoBehaviour
 {
     [SerializeField]
     private EntityControl entityControl;
-    private Animator animator;
+    public Animator animator;
     private bool isMoving;
 
     private void Awake()

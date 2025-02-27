@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 [Serializable]
 public class BossStage
@@ -14,11 +16,19 @@ public class BossStage
 public abstract class BossStatus : MonoBehaviour
 {
     public static BossStatus instance;
-    private Animator animator;
+    protected Animator animator;
 
     [Header("Boss status")]
     public List<BossStage> bossStages;
     public bool isInvincible = false;
+
+    [Header("Bonuses on dead")]
+    [SerializeField]
+    protected int addScore;
+    [SerializeField]
+    protected int addHp;
+    [SerializeField]
+    protected int addBomb;
 
     [Header("Private var's")]
     [SerializeField]
@@ -27,6 +37,7 @@ public abstract class BossStatus : MonoBehaviour
     private void Awake() {
         instance = this;
         animator = GetComponent<Animator>();
+        DialogueManager.Instance.onDialogueEnd = () => animator.SetTrigger("Start");    
     }
 
     public virtual void TakeHP(int amount = 1)
@@ -44,15 +55,18 @@ public abstract class BossStatus : MonoBehaviour
 
         if(buff.hpAmount <= 0)
         {
+            animator.SetTrigger(buff.animationTrigger);
             bossStages.RemoveAt(0);
         }
         if(bossStages.Count() == 0)
         {
+            PlayerStatus.instance.score += addScore;
+            PlayerStatus.instance.bombAmount += addBomb;
+            PlayerStatus.instance.hp += addHp;
+
             OnDead();
             return;
         }
-
-        animator.SetTrigger(bossStages.First().animationTrigger);
     }
 
     public abstract void OnDead();
@@ -63,5 +77,9 @@ public abstract class BossStatus : MonoBehaviour
             TakeHP();
             Destroy(other.gameObject);
         }
+    }
+
+    private void OnDestroy() {
+        DialogueManager.Instance.onDialogueEnd -= () => animator.SetTrigger("Start");    
     }
 }

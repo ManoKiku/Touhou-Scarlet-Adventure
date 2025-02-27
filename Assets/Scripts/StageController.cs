@@ -24,6 +24,9 @@ public class StageController : MonoBehaviour
     [Header("Bosse's settings")]
     public List<Boss> bosses;
     public GameObject BossUI;
+
+    [Header("Player settings")]
+    public PlayableDirector onDead;
      
      private void Awake() {
         instance = this;
@@ -46,12 +49,17 @@ public class StageController : MonoBehaviour
     public void StartBossFight()
     {
         BossUI.SetActive(true);
-        WaveSpawner.instance.isActive = false;
+        WaveSpawner.instance.isWorking = false;
 
         Boss buff = bosses.First(); 
+        Debug.Log(bosses.Count);
 
-        Instantiate(buff.bossPrefab, buff.spawnPoint, transform.rotation);
+        Instantiate(buff.bossPrefab, buff.spawnPoint, new Quaternion());
         buff.director.Play();
         bosses.RemoveAt(0);
+    }
+
+    private void OnDestroy() {
+        WaveSpawner.OnWaveChange -= OnWaveChane;
     }
 }
