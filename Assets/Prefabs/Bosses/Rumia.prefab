@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 618911289866213521}
   - component: {fileID: 5663626486209092587}
   - component: {fileID: 8194710265302966707}
+  - component: {fileID: 4223424961367028518}
   m_Layer: 7
   m_Name: Rumia
   m_TagString: Enemy
@@ -186,6 +187,23 @@ MonoBehaviour:
   isActive: 1
   axis: {x: 0, y: 0}
   speed: 2.5
+--- !u!114 &4223424961367028518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5142954151683781627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a833fb760cde84944aa5cb934509a61c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 5
+  bulletLife: 5
+  bulletPrefab: {fileID: 6582496633998073183, guid: da1348aebdfe1184b91394a1f5215d9a, type: 3}
+  spawnPoint: {fileID: 3052669777401170606}
+  offset: {x: 0, y: -0.34, z: 0}
 --- !u!1 &9154708517938556427
 GameObject:
   m_ObjectHideFlags: 0

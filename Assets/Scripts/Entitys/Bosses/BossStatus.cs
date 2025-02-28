@@ -35,6 +35,18 @@ public abstract class BossStatus : MonoBehaviour
     protected GameObject attackedEffect;
 
     private void Awake() {
+        GameObject[] toDelete = GameObject.FindGameObjectsWithTag("Bullet");
+        foreach(var i in toDelete)
+        {
+            Destroy(i);
+        }
+
+        toDelete = GameObject.FindGameObjectsWithTag("PlayerBullet");
+        foreach(var i in toDelete)
+        {
+            Destroy(i);
+        }
+
         instance = this;
         animator = GetComponent<Animator>();
         DialogueManager.Instance.onDialogueEnd = () => animator.SetTrigger("Start");    

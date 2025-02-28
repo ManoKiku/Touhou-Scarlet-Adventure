@@ -176,4 +176,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 2
   additionalForce: 6
-  addValue: 10
+  addValue: 7
