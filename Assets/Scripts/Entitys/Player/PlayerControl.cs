@@ -143,7 +143,7 @@ public class PlayerControl : EntityControl
                 obj.GetComponent<EnemyStatus>().TakeHP(bombDamage);
             }
         }
- 
+        
         PlayerStatus.instance.bombAmount--;
     }
 }

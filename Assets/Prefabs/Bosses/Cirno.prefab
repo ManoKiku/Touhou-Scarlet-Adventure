@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8194710265302966707}
   - component: {fileID: 4223424961367028518}
   m_Layer: 7
-  m_Name: Rumia
+  m_Name: Cirno
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ Animator:
   m_GameObject: {fileID: 5142954151683781627}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b03cc16b8c9a9ce42bd0f42fe9613f47, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3e7c19d29c3fa3a4ea890f1beaf4d07a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -90,14 +90,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossStages:
-  - hpAmount: 100
-    maxHP: 100
+  - hpAmount: 150
+    maxHP: 150
     animationTrigger: Attack1
   - hpAmount: 150
     maxHP: 150
     animationTrigger: Attack2
+  - hpAmount: 150
+    maxHP: 150
+    animationTrigger: Attack3
+  - hpAmount: 150
+    maxHP: 150
+    animationTrigger: Attack4
   isInvincible: 0
-  addScore: 2000
+  addScore: 5000
   addHp: 1
   addBomb: 1
   attackedEffect: {fileID: 1458263997071272213, guid: d1b403def5ec44946a8119dd5deec8ce, type: 3}
@@ -106,8 +112,8 @@ MonoBehaviour:
     - character:
         name: Hakurei Reimu
         icon: {fileID: -877045866, guid: 443f8322ac683e149a15731ffa9fcf88, type: 3}
-      line: Of course, you wouldn't know if it's good medicine or not unless you
-        drank it for yourself.
+      line: Ah, it's gotten chilly out. I'll catch an air conditioner cold at this
+        rate.
 --- !u!70 &618911289866213521
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -281,7 +287,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5662007422927484889, guid: 7ddb024497a93ae47b67dc86b2452179, type: 3}
+  m_Sprite: {fileID: 4865651850653354526, guid: b355b6a69a8a01c468d48f458d065f64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -302,7 +308,7 @@ Animator:
   m_GameObject: {fileID: 9154708517938556427}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 64f3b1e71bea465418b4bc851b4b0195, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3b5c5fc18fbd836429ebd92a1659f4db, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

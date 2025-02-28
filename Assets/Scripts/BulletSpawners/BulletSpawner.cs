@@ -25,4 +25,21 @@ public class BulletSpawner : MonoBehaviour
 
         Destroy(bullet, bulletLife);       
     }
+
+    public void Shoot(float angle)
+    {
+        GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
+        var buff = bullet.GetComponent<Rigidbody2D>();
+
+        float angleInRadians = angle * Mathf.Deg2Rad;
+
+        buff.velocity = new Vector2(
+            Mathf.Cos(angleInRadians),
+            Mathf.Sin(angleInRadians) 
+        ).normalized * bulletSpeed;
+
+        bullet.transform.rotation = Quaternion.Euler(0, 0, angle);    
+
+        Destroy(bullet, bulletLife); 
+    }
 }

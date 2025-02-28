@@ -26,6 +26,7 @@ public class RumiaBoss : BossStatus
         DialogueManager.Instance.onDialogueEnd -= DestroyBoss;
         StageController.instance.onDead.Play();
         StageController.instance.BossUI.SetActive(false);
+        StageController.instance.ResetPlayer();
         WaveSpawner.instance.isWorking = true;
         Destroy(gameObject);
     }

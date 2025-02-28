@@ -25,8 +25,13 @@ public class StageController : MonoBehaviour
     public List<Boss> bosses;
     public GameObject BossUI;
 
+
     [Header("Player settings")]
     public PlayableDirector onDead;
+    public CinemachineVirtualCamera cv;
+    public CinemachineConfiner2D cc;
+    public Collider2D cameraBounds;
+
      
      private void Awake() {
         instance = this;
@@ -57,6 +62,13 @@ public class StageController : MonoBehaviour
         Instantiate(buff.bossPrefab, buff.spawnPoint, new Quaternion());
         buff.director.Play();
         bosses.RemoveAt(0);
+    }
+
+    public void ResetPlayer()
+    {
+        cv.Follow = PlayerControl.instance.transform;
+        cv.m_Lens.OrthographicSize = 3;
+        cc.m_BoundingShape2D = cameraBounds;
     }
 
     private void OnDestroy() {
