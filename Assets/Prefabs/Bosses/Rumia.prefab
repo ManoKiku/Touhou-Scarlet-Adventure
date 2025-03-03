@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5663626486209092587}
   - component: {fileID: 8194710265302966707}
   - component: {fileID: 4223424961367028518}
+  - component: {fileID: 9049678007516117137}
   m_Layer: 7
   m_Name: Rumia
   m_TagString: Boss
@@ -96,6 +97,9 @@ MonoBehaviour:
   - hpAmount: 150
     maxHP: 150
     animationTrigger: Attack2
+  - hpAmount: 150
+    maxHP: 150
+    animationTrigger: Attack3
   isInvincible: 0
   addScore: 2000
   addHp: 1
@@ -204,6 +208,23 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6582496633998073183, guid: da1348aebdfe1184b91394a1f5215d9a, type: 3}
   spawnPoint: {fileID: 3052669777401170606}
   offset: {x: 0, y: -0.34, z: 0}
+--- !u!114 &9049678007516117137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5142954151683781627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e566af23a57a3429d39dfed03dcf37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: -0.34, z: 0}
+  spikeBullet: {fileID: 6582496633998073183, guid: 51d3f68eaa76e294289ca2e27119c76c, type: 3}
+  smallBullet: {fileID: 6582496633998073183, guid: cc36434be34a0d44dbd9cf74f421a590, type: 3}
+  mediumBullet: {fileID: 6582496633998073183, guid: da1348aebdfe1184b91394a1f5215d9a, type: 3}
+  bigBullet: {fileID: 6582496633998073183, guid: acb8bafe416443348a6cfcbe11ecf9f2, type: 3}
 --- !u!1 &9154708517938556427
 GameObject:
   m_ObjectHideFlags: 0

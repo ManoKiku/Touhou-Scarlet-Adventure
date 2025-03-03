@@ -30,8 +30,8 @@ public class RadialBulletController : MonoBehaviour
             // Create game objects.
             GameObject tmpObj = Instantiate(ProjectilePrefab, transform.position, Quaternion.identity);
             tmpObj.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileMoveDirection.x, projectileMoveDirection.y);
+            tmpObj.transform.rotation = Quaternion.Euler(0, 0, -angle); 
 
-            // Destory the gameobject after 10 seconds.
             Destroy(tmpObj, lifeTime);
 
             angle += angleStep;

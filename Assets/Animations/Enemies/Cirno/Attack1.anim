@@ -18,7 +18,7 @@ AnimationClip:
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
-  m_SampleRate: 18
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -31,7 +31,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2
+    m_StopTime: 0.8833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -52,261 +52,464 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 180
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.055555556
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 190
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.11111111
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 200
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.16666667
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 210
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.22222222
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 220
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.2777778
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 230
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.33333334
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 240
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.3888889
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 250
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.44444445
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 260
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.5
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 270
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.5555556
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 280
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.6111111
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 290
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.6666667
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 300
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.7222222
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 310
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.7777778
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 320
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.8333333
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 330
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.8888889
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 340
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.9444444
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 350
-    intParameter: 0
-    messageOptions: 0
-  - time: 1
-    functionName: Shoot
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.0555556
-    functionName: Shoot
+  - time: 0.016666668
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 350
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.1111112
-    functionName: Shoot
+  - time: 0.033333335
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 340
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.1666666
-    functionName: Shoot
+  - time: 0.05
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 330
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.2222222
-    functionName: Shoot
+  - time: 0.06666667
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 320
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.2777778
-    functionName: Shoot
+  - time: 0.083333336
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 310
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.3333334
-    functionName: Shoot
+  - time: 0.1
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 300
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.3888888
-    functionName: Shoot
+  - time: 0.116666675
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 290
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.4444444
-    functionName: Shoot
+  - time: 0.13333334
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 280
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.5
-    functionName: Shoot
+  - time: 0.15
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 270
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.5555556
-    functionName: Shoot
+  - time: 0.16666667
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 260
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.6111112
-    functionName: Shoot
+  - time: 0.18333334
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 250
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.6666666
-    functionName: Shoot
+  - time: 0.2
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 240
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.7222222
-    functionName: Shoot
+  - time: 0.21666667
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 230
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.7777778
-    functionName: Shoot
+  - time: 0.23333335
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 220
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.8333334
-    functionName: Shoot
+  - time: 0.25
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 210
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.8888888
-    functionName: Shoot
+  - time: 0.26666668
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 200
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.9444444
-    functionName: Shoot
+  - time: 0.28333333
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 190
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2
-    functionName: Shoot
+  - time: 0.3
+    functionName: RandomColorAttack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 180
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.31666666
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.33333334
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.35000002
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.36666667
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.38333336
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.4
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.4166667
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.43333334
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.45000002
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.4666667
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.48333335
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.51666665
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.53333336
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.55
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5666667
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5833334
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6166667
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6333333
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.65
+    functionName: RandomColorAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6666667
+    functionName: LockPlayer
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.68333334
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 2
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.68333334
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -2
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.68333334
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -1
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.68333334
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 1
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.68333334
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.73333335
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -1
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.73333335
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 1
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.73333335
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -2
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.73333335
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.73333335
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 2
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.78333336
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 1
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.78333336
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -1
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.78333336
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 2
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.78333336
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -2
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.78333336
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8333333
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8333333
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 2
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8333333
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -1
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8333333
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -2
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8333333
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 1
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8833333
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -2
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8833333
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 1
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8833333
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8833333
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 2
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8833333
+    functionName: LockedPositionFireAngle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -1
     intParameter: 0
     messageOptions: 0

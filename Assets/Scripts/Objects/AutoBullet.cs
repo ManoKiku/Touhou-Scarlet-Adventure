@@ -20,7 +20,7 @@ public class AutoBullet : MonoBehaviour
     private void Update()
     {
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, autoAimRadius)
-                                    .Where(x => x.CompareTag("Enemy")).ToArray();
+                                    .Where(x => x.CompareTag("Enemy") || x.CompareTag("Boss")).ToArray();
                                
         if(hitColliders.Length == 0)
             return;
