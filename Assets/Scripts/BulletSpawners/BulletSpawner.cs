@@ -38,7 +38,7 @@ public class BulletSpawner : MonoBehaviour
             Mathf.Sin(angleInRadians) 
         ).normalized * bulletSpeed;
 
-        bullet.transform.rotation = Quaternion.Euler(0, 0, angle);    
+        bullet.transform.rotation = Quaternion.Euler(0, 0, 90 + angle);    
 
         Destroy(bullet, bulletLife); 
     }

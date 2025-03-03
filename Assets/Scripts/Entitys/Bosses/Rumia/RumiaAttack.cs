@@ -10,11 +10,16 @@ public class RumiaAttack : MonoBehaviour
 
 
     [Header("First attack")]
-    public Vector3 offset;
-    public GameObject spikeBullet;
-    public GameObject smallBullet;
-    public GameObject mediumBullet;
-    public GameObject bigBullet;
+    [SerializeField]
+    protected Vector3 offset;
+    [SerializeField]
+    protected GameObject spikeBullet;
+    [SerializeField]
+    protected GameObject smallBullet;
+    [SerializeField]
+    protected GameObject mediumBullet;
+    [SerializeField]
+    protected GameObject bigBullet;
 
     private void Awake() {
         bulletSpawner = GetComponent<BulletSpawner>();

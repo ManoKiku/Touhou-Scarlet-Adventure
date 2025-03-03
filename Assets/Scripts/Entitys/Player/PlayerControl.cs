@@ -131,11 +131,11 @@ public class PlayerControl : EntityControl
             return;
         }
 
-        Destroy(Instantiate(bombEffect, transform.position, new Quaternion()), 1);
+        Destroy(Instantiate(bombEffect, transform.position, Quaternion.identity), 1);
 
         List<Collider2D> objects = Physics2D.OverlapCircleAll(transform.position, bombRadius).ToList<Collider2D>();
         foreach(var obj in objects) {
-            if(obj.CompareTag("Bullet")) {
+            if(obj.tag.StartsWith("Bullet")) {
                 Destroy(obj.gameObject);
             }
             if(obj.CompareTag("Enemy"))

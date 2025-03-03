@@ -39,9 +39,9 @@ public class PlayerStatus : EntityStatus
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Bullet")) {
+        if(other.tag.StartsWith("Bullet")) {
             Debug.Log("Attacked!");
-            Destroy(Instantiate(attackedEffect, other.transform.position, new Quaternion()), 1);
+            Destroy(Instantiate(attackedEffect, other.transform.position, Quaternion.identity), 1);
             Destroy(other.gameObject);
             TakeHP();
         }    

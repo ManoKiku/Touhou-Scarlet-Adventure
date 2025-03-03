@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 5
-  bulletLife: 5
+  bulletLife: 8
   bulletPrefab: {fileID: 6582496633998073183, guid: da1348aebdfe1184b91394a1f5215d9a, type: 3}
   spawnPoint: {fileID: 3052669777401170606}
   offset: {x: 0, y: -0.34, z: 0}
@@ -224,16 +224,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: -0.34, z: 0}
-  spikeBullet: {fileID: 6582496633998073183, guid: 51d3f68eaa76e294289ca2e27119c76c, type: 3}
+  spikeBullet: {fileID: 6582496633998073183, guid: 4d7ba60ad19a01b46b2fd29bf225824e, type: 3}
   smallBullet: {fileID: 6582496633998073183, guid: cc36434be34a0d44dbd9cf74f421a590, type: 3}
-  mediumBullet: {fileID: 6582496633998073183, guid: acb8bafe416443348a6cfcbe11ecf9f2, type: 3}
+  mediumBullet: {fileID: 6582496633998073183, guid: d96b4f87ec4ffbf4688d8340f0a25f43, type: 3}
   bigBullet: {fileID: 6582496633998073183, guid: acb8bafe416443348a6cfcbe11ecf9f2, type: 3}
+  autoAimBullet: {fileID: 6582496633998073183, guid: d57013951fc843f4cbbfbe2c02bfb5b2, type: 3}
   randomSprites:
-  - {fileID: -1618042170, guid: 5e266d8d7a667994c9a9ea29d4a35964, type: 3}
+  - {fileID: 1857701511, guid: 5e266d8d7a667994c9a9ea29d4a35964, type: 3}
   - {fileID: 730061600, guid: 5e266d8d7a667994c9a9ea29d4a35964, type: 3}
   - {fileID: 114379383, guid: 5e266d8d7a667994c9a9ea29d4a35964, type: 3}
   - {fileID: -763740353, guid: 5e266d8d7a667994c9a9ea29d4a35964, type: 3}
   - {fileID: 224602684, guid: 5e266d8d7a667994c9a9ea29d4a35964, type: 3}
+  lockSprite: {fileID: -1618042170, guid: 5e266d8d7a667994c9a9ea29d4a35964, type: 3}
 --- !u!1 &9154708517938556427
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +312,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 4865651850653354526, guid: b355b6a69a8a01c468d48f458d065f64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

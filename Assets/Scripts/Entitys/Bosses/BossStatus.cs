@@ -67,6 +67,11 @@ public abstract class BossStatus : MonoBehaviour
 
         if(buff.hpAmount <= 0)
         {
+            List<Collider2D> objects = Physics2D.OverlapCircleAll(transform.position, 15).Where(x => x.tag.StartsWith("Bullet")).ToList();
+            foreach(var i in objects)
+            {
+                Destroy(i.gameObject);
+            }
             animator.SetTrigger(buff.animationTrigger);
             bossStages.RemoveAt(0);
         }

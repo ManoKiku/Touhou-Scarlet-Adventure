@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CirnoAttack : RumiaAttack
 {
-    public Sprite[] randomSprites;
+    [SerializeField]
+    protected GameObject autoAimBullet;
+    [SerializeField]
+    protected Sprite[] randomSprites;
+    [SerializeField]
+    protected Sprite lockSprite;
+
 
     public void LockedPositionFireAngle(float angle = 0f)
     {
@@ -21,6 +28,12 @@ public class CirnoAttack : RumiaAttack
         radialBulletController.SpawnProjectile(amount);
     }
 
+    public void RadialAutoAimAttack(int amount)
+    {
+        radialBulletController.ProjectilePrefab = autoAimBullet;
+        radialBulletController.projectileSpeed = 4;
+        radialBulletController.SpawnProjectile(amount);
+    }
 
     public void RandomColorAttack()
     {
@@ -32,6 +45,23 @@ public class CirnoAttack : RumiaAttack
 
     public void LockBullets()
     {
+        GameObject[] bulletsToLock = GameObject.FindGameObjectsWithTag("BulletLock");
 
+        foreach(var i in bulletsToLock)
+        {
+            i.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            i.GetComponent<SpriteRenderer>().sprite = lockSprite;
+        }
+    }
+
+    public void UnlockBullets()
+    {
+        GameObject[] bulletsToLock = GameObject.FindGameObjectsWithTag("BulletLock");
+
+        foreach(var i in bulletsToLock)
+        {
+            i.GetComponent<Rigidbody2D>().gravityScale = Random.Range(20, 50) / 100.0f;
+            i.GetComponent<SpriteRenderer>().sprite =  randomSprites[Random.Range(0, randomSprites.Length)];
+        }
     }
 }
